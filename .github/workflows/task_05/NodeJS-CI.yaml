@@ -15,8 +15,8 @@ jobs:
       - name: Set up of Node
         uses: actions/setup-node@v4
 
-      - name: Creating a packae.json
-        runs: npm init -y
+      - name: Creating a package.json
+        run: npm init -y
 
         with:
           node-version: 18
