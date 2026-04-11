@@ -1,0 +1,17 @@
+name: Multi-Job-CI
+
+on:[push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Building
+        run: echo "Building phase"
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Testing
+        run: echo "Testing phase"
