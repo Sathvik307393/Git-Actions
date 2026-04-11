@@ -2,7 +2,7 @@ name: 05-NodeJS-CI
 
 on:
   push:
-    branch:
+    branches:
       - main
 
 jobs:
@@ -14,6 +14,9 @@ jobs:
 
       - name: Set up of Node
         uses: actions/setup-node@v4
+
+      - name: Creating a packae.json
+        runs: npm init -y
 
         with:
           node-version: 18
